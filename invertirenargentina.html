@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RGMA Argentina Desk | RIGI Investments, ITQ Fishing, Energy</title>
+<meta name="description" content="RGMA Argentina Desk — Legal architecture for RIGI, ITQ fishing, Vaca Muerta energy, lithium and agribusiness. Delaware and Argentina structure.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0A1931;--gold:#B6A088;--paper:#fcfcfc;--ease:cubic-bezier(0.2,0.8,0.2,1)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',system-ui;background:var(--paper);color:#1a1a1a;-webkit-font-smoothing:antialiased}
+header img,.logo img,.top-brand img{background:transparent!important;display:block;object-fit:contain}
+
+/* TOP BAR */
+.top-bar{position:absolute;inset:0 0 auto 0;z-index:30;display:flex;justify-content:space-between;align-items:center;padding:18px 40px;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:#fff;background:rgba(10,25,49,.88);backdrop-filter:blur(12px);border-bottom:1px solid rgba(182,160,136,.15)}
+.top-brand{display:flex;align-items:center;gap:16px;color:var(--gold);font-weight:600;text-decoration:none}
+.top-brand img{height:28px;width:auto}
+.top-brand-line{width:1px;height:18px;background:rgba(255,255,255,.2);display:inline-block}
+.top-actions{display:flex;gap:16px;align-items:center}
+.btn-home{background:var(--gold);color:var(--navy);padding:8px 16px;font-size:9px;letter-spacing:2px;font-weight:700;text-decoration:none;border:1px solid var(--gold);transition:.3s}
+.btn-home:hover{background:transparent;color:var(--gold)}
+.lang-switch{display:flex;gap:8px}
+.lang-switch button{background:transparent;border:1px solid rgba(182,160,136,.25);color:#fff;font-size:9px;letter-spacing:2px;padding:6px 10px;cursor:pointer;transition:.3s}
+.lang-switch button.active,.lang-switch button:hover{background:var(--gold);color:var(--navy);border-color:var(--gold)}
+.top-link{color:#fff;text-decoration:none;font-weight:500}
+
+/* HERO CON DIAGONAL - RESTAURADA */
+.hero{position:relative;height:92vh;min-height:640px;background:var(--navy);overflow:hidden;isolation:isolate}
+.hero::after{content:"";position:absolute;bottom:-1px;left:0;width:100%;height:160px;background:var(--paper);clip-path:polygon(0 45%,100% 100%,100% 100%,0 100%);z-index:4}
+.hero::before{content:"";position:absolute;bottom:158px;left:0;width:100%;height:1.5px;background:var(--gold);transform:skewY(3.8deg);transform-origin:left;z-index:10}
+.slide{position:absolute;inset:0;display:flex;opacity:0;visibility:hidden;transition:opacity .9s,visibility .9s;pointer-events:none}
+.slide.active{opacity:1;visibility:visible;pointer-events:auto;z-index:2}
+.s-left{width:42%;display:flex;flex-direction:column;justify-content:center;padding:0 5% 0 6%;background:var(--navy)}
+.s-right{width:58%;position:relative;overflow:hidden;background:var(--navy)}
+.s-right img{width:100%;height:100%;object-fit:cover;display:block}
+.eyebrow{font-size:10px;letter-spacing:4px;text-transform:uppercase;color:#8aa0c8;margin-bottom:28px}
+.title{font-family:'Cormorant Garamond',serif;font-size:clamp(32px,3.8vw,54px);line-height:.95;font-weight:300;color:#fff;margin-bottom:22px}
+.desc{font-size:14px;line-height:1.7;color:rgba(255,255,255,.62);max-width:380px;margin-bottom:32px;font-weight:300}
+.cta{display:inline-flex;align-items:center;gap:8px;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);border:1px solid rgba(182,160,136,.35);padding:14px 28px;text-decoration:none;transition:all .35s var(--ease);background:transparent}
+.cta:hover{background:var(--gold);color:var(--navy);transform:translateY(-2px);letter-spacing:3.3px}
+.nav-hero{position:absolute;bottom:38px;left:6%;z-index:10;display:flex;align-items:center;gap:22px}
+.nav-arrows{display:flex;gap:1px;background:rgba(255,255,255,.1)}
+.arr{width:44px;height:44px;background:var(--navy);color:rgba(255,255,255,.6);border:1px solid rgba(255,255,255,.12);cursor:pointer;display:grid;place-items:center;transition:.3s;font-size:18px}
+.arr:hover{background:var(--gold);color:var(--navy)}
+.dots{display:flex;gap:8px}
+.dot{width:28px;height:2px;background:rgba(255,255,255,.15);border:0;cursor:pointer;transition:all .5s}
+.dot.active{background:var(--gold);width:56px}
+.counter{color:rgba(255,255,255,.3);font-size:10px;letter-spacing:3px}
+
+/* STICKY NAV */
+.sticky-nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-bottom:1px solid #eee}
+.nav-inner{max-width:1280px;margin:0 auto;padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:13px;letter-spacing:.5px;color:var(--navy);display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo img{height:26px;width:auto}
+.menu{display:flex;gap:28px;align-items:center}
+.m-link{font-size:11px;letter-spacing:1.8px;text-transform:uppercase;color:#6b7280;text-decoration:none;padding:24px 0;transition:.3s;cursor:pointer}
+.m-link:hover{color:var(--navy)}
+.m-link.active-gold{color:var(--gold);font-weight:700}
+.dropdown{position:relative;padding:24px 0}
+.dropdown-trigger{color:var(--gold)!important;font-weight:700}
+.dropdown-menu{position:absolute;top:100%;left:50%;transform:translateX(-50%);display:none;min-width:340px;background:#0A1931;border-top:2px solid #B6A088;box-shadow:0 25px 50px rgba(10,25,49,.4);z-index:200}
+.dropdown:hover .dropdown-menu,.dropdown:focus-within .dropdown-menu{display:block}
+.dropdown-menu a{display:flex;justify-content:space-between;align-items:center;padding:18px 24px;color:rgba(255,255,255,.75);font-size:11px;letter-spacing:2.2px;text-transform:uppercase;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.07);transition:.25s}
+.dropdown-menu a:hover{background:rgba(255,255,255,.06);color:var(--gold);padding-left:28px}
+.footer-cta{padding:14px 24px;background:#081328;border-top:1px solid rgba(255,255,255,.06);font-size:8.5px;letter-spacing:2.5px;color:rgba(255,255,255,.35);text-transform:uppercase}
+
+/* PHILOSOPHY */
+.philosophy{background:#fff;border-bottom:1px solid #eee;padding:100px 24px;text-align:center}
+.gold-line{width:40px;height:1px;background:var(--gold);margin:0 auto 32px}
+.quote{font-family:'Cormorant Garamond',serif;font-size:28px;font-style:italic;color:var(--navy);line-height:1.6;max-width:750px;margin:0 auto}
+.quote-sub{font-size:10px;letter-spacing:.3em;color:#999;text-transform:uppercase;font-weight:600;margin-top:20px;display:block}
+
+/* AREAS - ERROR DEL PUNTO CORREGIDO */
+.areas{background:var(--navy);overflow:hidden}
+.a-slide{display:none;grid-template-columns:1.1fr 0.9fr;gap:80px;max-width:1280px;margin:0 auto;padding:88px 40px;align-items:center}
+.a-slide.active{display:grid;animation:fade .6s ease}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.a-eyebrow{font-size:10px;letter-spacing:4px;color:var(--gold);font-weight:600;text-transform:uppercase;display:block;margin-bottom:28px}
+.a-title{font-family:'Cormorant Garamond',serif;font-size:clamp(32px,3.5vw,46px);color:#fff;line-height:1.1;margin-bottom:20px;font-weight:300}
+.a-p{font-size:14px;color:rgba(255,255,255,.6);max-width:420px;line-height:1.75;font-weight:300}
+.card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);padding:36px}
+.card h3{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:400;color:#fff;margin-bottom:24px}
+.kpi{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;border-top:1px solid rgba(255,255,255,.12);padding-top:26px;margin-top:36px}
+.kpi b{font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--gold);font-weight:400;display:block}
+.kpi span{font-size:9px;letter-spacing:2px;color:rgba(255,255,255,.4);text-transform:uppercase}
+.row{display:flex;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.08);padding-bottom:14px;margin-bottom:14px;font-size:12px}
+.row span:first-child{color:rgba(255,255,255,.5)}.row span:last-child{color:#fff}
+.row.no-border{border:0;margin:0}
+.btn{display:block;text-align:center;background:transparent;border:1px solid var(--gold);color:var(--gold);font-size:10px;letter-spacing:2px;font-weight:700;padding:16px;text-decoration:none;margin-top:28px;transition:.35s}
+.btn:hover{background:var(--gold);color:var(--navy);transform:translateY(-2px)}
+.a-dots{display:flex;gap:10px;justify-content:center;padding:0 0 56px}
+.a-dot{width:28px;height:2px;background:rgba(255,255,255,.18);border:0;cursor:pointer;transition:.4s}
+.a-dot.active{background:var(--gold);width:48px}
+
+/* NDA MODAL */
+#nda-modal{position:fixed;inset:0;z-index:9999;background:rgba(8,15,31,.85);backdrop-filter:blur(10px);display:none;align-items:center;justify-content:center;padding:20px}
+#nda-modal.open{display:flex}
+.nda-box{background:#fff;max-width:520px;width:100%;box-shadow:0 30px 80px rgba(0,0,0,.4)}
+.nda-header{background:var(--navy);padding:28px 32px;display:flex;justify-content:space-between;align-items:center}
+.nda-header h3{font-family:'Cormorant Garamond',serif;color:#fff;font-size:18px;font-weight:400}
+.nda-header span{color:var(--gold);font-size:10px;letter-spacing:2px}
+.nda-header button{background:none;border:0;color:#fff;font-size:18px;cursor:pointer}
+.nda-body{padding:28px 32px}
+.nda-check{display:flex;gap:12px;align-items:flex-start;background:#FAFAF8;border:1px solid #eee;padding:16px;margin:20px 0;font-size:12px}
+.nda-btn{flex:1;padding:14px;font-size:10px;letter-spacing:2px;font-weight:700;cursor:pointer;border:1px solid;text-transform:uppercase;transition:.3s}
+.nda-btn.cancel{background:#fff;border-color:#ddd;color:#555}
+.nda-btn.confirm{background:var(--navy);border-color:var(--navy);color:#fff}
+.nda-btn.confirm:disabled{opacity:.4;cursor:not-allowed}
+#contacto{background:var(--paper);padding:40px 0}
+
+@media(max-width:1024px){
+.s-left{width:100%;padding:100px 24px 120px}.s-right{display:none}
+.a-slide{grid-template-columns:1fr;padding:48px 24px;gap:32px}
+.menu{display:none}.top-bar{padding:12px 16px;flex-wrap:wrap;gap:10px}
+.hero::after{height:100px}.hero::before{bottom:98px}
+}
+</style>
+</head>
+<body>
+
+<div class="hero" id="hero">
+  <div class="top-bar">
+    <a href="index.html" class="top-brand">
+      <img src="logo-final.webp" alt="RGMA"><span class="top-brand-line"></span><span data-i18n="top_brand">RIGANTI, GEILER & MÁRQUEZ ALLURALDE — ARGENTINA DESK</span>
+    </a>
+    <div class="top-actions">
+      <a href="index.html" class="btn-home" data-i18n="btn_inicio">INICIO</a>
+      <div class="lang-switch"><button class="active" data-lang="en">EN</button><button data-lang="es">ES</button><button data-lang="pt">PT</button><button data-lang="zh">中文</button></div>
+      <a href="#contacto" class="top-link" data-i18n="top_contact">CONTACT</a>
+    </div>
+  </div>
+
+  <div class="slide active"><div class="s-left"><span class="eyebrow" data-i18n="s1_eye">01 — ENERGY & RIGI</span><h1 class="title">Excellence<br>advisory in<br>energy</h1><p class="desc">Vaca Muerta and Patagonian wind under RIGI. 30 years fiscal stability and Delaware ↔ Neuquén structure.</p><a class="cta" href="#areas" data-go="0">Explore RIGI</a></div><div class="s-right"><img src="vaca-muerta-a.jpg" alt="Vaca Muerta Investment" loading="eager"></div></div>
+  <div class="slide"><div class="s-left"><span class="eyebrow">02 — AGRO & REAL ASSETS</span><h1 class="title">From Delaware<br>to Rosario<br>in USD</h1><p class="desc">Agricultural trusts, tokenization and amnesty Law 27.743. 48hs due diligence.</p><a class="cta" href="#areas" data-go="1">View agro</a></div><div class="s-right"><img src="agro-silos.webp" alt="Agribusiness Real Assets" loading="lazy"></div></div>
+  <div class="slide"><div class="s-left"><span class="eyebrow">03 — LITHIUM & MINING</span><h1 class="title">Lithium Triangle<br>without fiscal<br>friction</h1><p class="desc">21% global reserves. 0% retentions under RIGI, stable royalties and Jujuy-Salta SPV in USD.</p><a class="cta" href="#areas" data-go="2">View mining</a></div><div class="s-right"><img src="litio-jujuy.webp" alt="Lithium Mining Jujuy" loading="lazy"></div></div>
+  <div class="slide"><div class="s-left"><span class="eyebrow">04 — FISHING & BLUE ECONOMY</span><h1 class="title">Fishing and ITQ<br>quota with<br>legal security</h1><p class="desc">Fleet, plants and JV under Law 24.922. Transferable quotas, RIGI processing and rebates.</p><a class="cta" href="#areas" data-go="3">View fishing structure</a></div><div class="s-right"><img src="pesca-altura.webp" alt="Blue Economy Fishing" loading="lazy"></div></div>
+  <div class="slide"><div class="s-left"><span class="eyebrow">05 — LOGISTICS & PORTS</span><h1 class="title">Waterway and ports<br>RIGI with free<br>USD</h1><p class="desc">Paraná terminals, 80% of exports. RIGI port with free FX and 0% rate.</p><a class="cta" href="#areas" data-go="4">View logistics</a></div><div class="s-right"><img src="pueto-rosario-a.webp" alt="Logistics Waterway Ports" loading="lazy"></div></div>
+
+  <div class="nav-hero"><div class="nav-arrows"><button class="arr" data-action="prev">‹</button><button class="arr" data-action="next">›</button></div><div id="dots" class="dots"></div><div id="counter" class="counter">01 — 05</div></div>
+</div>
+
+<nav class="sticky-nav"><div class="nav-inner"><a href="index.html" class="logo"><img src="logo-final.webp" alt="RGMA"> RGMA ARGENTINA DESK</a><div class="menu"><a class="m-link active-gold" href="index.html">INICIO</a><a class="m-link" href="#filosofia">The Firm</a><a class="m-link" href="#areas">Vehicles</a><div class="dropdown"><span class="m-link dropdown-trigger">AREAS</span><div class="dropdown-menu"><a href="#" data-go-nav="0"><span>01 — ENERGÍA</span><i>→</i></a><a href="#" data-go-nav="1"><span>02 — AGRONEGOCIOS</span><i>→</i></a><a href="#" data-go-nav="2"><span>03 — MINERÍA</span><i>→</i></a><a href="#" data-go-nav="3"><span>04 — PESCA</span><i>→</i></a><a href="#" data-go-nav="4"><span>05 — LOGÍSTICA</span><i>→</i></a><div class="footer-cta">VER ESTRUCTURA + TEASER NDA</div></div></div><a class="m-link" href="#contacto">Contact</a></div></div></nav>
+
+<section id="filosofia" class="philosophy"><div class="gold-line"></div><p class="quote">"A good tailor keeps his client for life because, knowing his development, he knows how to better adapt his garments."</p><span class="quote-sub">RGMA Philosophy — Since 1948</span></section>
+
+<section id="areas" class="areas">
+  <div class="a-slide active" id="area-energia"><div><span class="a-eyebrow">01 — ENERGY</span><h2 class="a-title">Energy: Vaca Muerta<br>with 30-year RIGI<br>no one structures.</h2><p class="a-p">SPVs with free FX availability and USD contracts.</p><div class="kpi"><div><b>USD 2B</b><span>RIGI Minimum</span></div><div><b>30 years</b><span>Stability</span></div><div><b>100%</b><span>Free FX</span></div></div></div><div class="card"><h3>Energy SPV Structure</h3><div class="row"><span>Vehicle</span><span>S.A.U. + RIGI</span></div><div class="row"><span>Asset</span><span>VM Block</span></div><div class="row no-border"><span>Exit</span><span>Off-take + M&A</span></div><a class="btn" href="#" data-nda="Energy - Vaca Muerta">REQUEST ENERGY TEASER</a></div></div>
+  <div class="a-slide" id="area-agro"><div><span class="a-eyebrow">02 — AGRO</span><h2 class="a-title">Agro: from Delaware<br>to Rosario<br>in USD.</h2><p class="a-p">Agricultural trusts and MATBA forwards.</p><div class="kpi"><div><b>USD 50M</b><span>Ticket</span></div><div><b>12%</b><span>USD Yield</span></div><div><b>Trust</b><span>Vehicle</span></div></div></div><div class="card"><h3>Agro SPV Structure</h3><div class="row"><span>Vehicle</span><span>Trust + S.A.</span></div><div class="row no-border"><span>Exit</span><span>Land sale</span></div><a class="btn" href="#" data-nda="Agro - Rosario">REQUEST AGRO TEASER</a></div></div>
+  <div class="a-slide" id="area-mineria"><div><span class="a-eyebrow">03 — MINING</span><h2 class="a-title">Mining: Lithium<br>global triangle<br>with Asia off-take.</h2><p class="a-p">21% global reserves. SPV Jujuy-Salta with USD contracts.</p><div class="kpi"><div><b>0% Ret.</b><span>RIGI</span></div><div><b>USD</b><span>Royalties</span></div><div><b>Asia</b><span>Off-take</span></div></div></div><div class="card"><h3>Lithium SPV</h3><div class="row"><span>Vehicle</span><span>SAPEM + RIGI</span></div><div class="row no-border"><span>Asset</span><span>Salar</span></div><a class="btn" href="#" data-nda="Mining - Lithium">REQUEST LITHIUM TEASER</a></div></div>
+  <div class="a-slide" id="area-pesca"><div><span class="a-eyebrow">04 — FISHING</span><h2 class="a-title">Fishing and ITQ<br>quota with<br>legal security</h2><p class="a-p">Fleet, plants and JV under Law 24.922. Transferable quotas.</p><div class="kpi"><div><b>ITQ</b><span>Quota</span></div><div><b>Law 24.922</b><span>Framework</span></div><div><b>JV</b><span>Vehicle</span></div></div></div><div class="card"><h3>Fishing SPV</h3><div class="row"><span>Vehicle</span><span>S.A. + ITQ</span></div><div class="row no-border"><span>Asset</span><span>Vessels + Plant</span></div><a class="btn" href="#" data-nda="Fishing - ITQ">REQUEST FISHING TEASER</a></div></div>
+  <div class="a-slide" id="area-logistica"><div><span class="a-eyebrow">05 — LOGISTICS</span><h2 class="a-title">Waterway and ports<br>RIGI with free<br>USD</h2><p class="a-p">Paraná terminals, 80% of exports. RIGI port with free FX.</p><div class="kpi"><div><b>80%</b><span>Exports</span></div><div><b>RIGI</b><span>Port</span></div><div><b>USD</b><span>Free</span></div></div></div><div class="card"><h3>Logistics SPV</h3><div class="row"><span>Vehicle</span><span>Terminal + RIGI</span></div><div class="row no-border"><span>Exit</span><span>Concession</span></div><a class="btn" href="#" data-nda="Logistics - Hidrovia">REQUEST LOGISTICS TEASER</a></div></div>
+  <div class="a-dots"><button class="a-dot active" data-go="0"></button><button class="a-dot" data-go="1"></button><button class="a-dot" data-go="2"></button><button class="a-dot" data-go="3"></button><button class="a-dot" data-go="4"></button></div>
+</section>
+
+<div id="nda-modal"><div class="nda-box"><div class="nda-header"><h3>Confidential NDA</h3><span id="nda-area-label">RGMA</span><button id="close-nda">✕</button></div><div class="nda-body"><p style="font-size:13px;line-height:1.6;color:#555">By requesting this Teaser you accept confidentiality for 24 months. All data is indicative and subject to due diligence.</p><label class="nda-check"><input type="checkbox" id="check-nda"><span>I accept NDA and confidential use of information.</span></label><div style="display:flex;gap:12px"><button class="nda-btn cancel" id="cancel-nda">Cancel</button><button class="nda-btn confirm" id="confirm-nda" disabled>Accept & Request Teaser</button></div></div></div></div>
+
+<section id="contacto"><div id="teaser-feedback" style="display:none;background:var(--navy);color:var(--gold);padding:16px;text-align:center;font-size:11px;letter-spacing:2px"></div></section>
+
+<script>
+(() => {
+  const hero = document.getElementById('hero');
+  const slides = [...hero.querySelectorAll('.slide')];
+  const dots = document.getElementById('dots');
+  const counter = document.getElementById('counter');
+  let cur = 0, tHero = null;
+  const renderHero = () => {
+    slides.forEach((s,i)=>s.classList.toggle('active', i===cur));
+    dots.innerHTML='';
+    slides.forEach((_,i)=>{ const b=document.createElement('button'); b.className='dot'+(i===cur?' active':''); b.onclick=()=>goHero(i); dots.appendChild(b); });
+    counter.textContent=`0${cur+1} — 0${slides.length}`;
+  };
+  const goHero = (n) => { cur=(n+slides.length)%slides.length; renderHero(); restartHero(); };
+  const restartHero = () => { clearInterval(tHero); if(document.hidden) return; tHero=setInterval(()=>goHero(cur+1),7000); };
+  hero.querySelector('[data-action="prev"]').addEventListener('click', ()=>goHero(cur-1));
+  hero.querySelector('[data-action="next"]').addEventListener('click', ()=>goHero(cur+1));
+  hero.addEventListener('mouseenter', ()=>clearInterval(tHero));
+  hero.addEventListener('mouseleave', restartHero);
+  document.addEventListener('visibilitychange', restartHero);
+  renderHero(); restartHero();
+
+  const aSlides=[...document.querySelectorAll('.a-slide')];
+  const aDots=[...document.querySelectorAll('.a-dot')];
+  let aCur=0;
+  const renderArea=()=>{aSlides.forEach((s,i)=>s.classList.toggle('active',i===aCur));aDots.forEach((d,i)=>d.classList.toggle('active',i===aCur));};
+  const goArea=(n)=>{aCur=(n+aSlides.length)%aSlides.length;renderArea();document.getElementById('areas').scrollIntoView({behavior:'smooth',block:'start'});};
+  aDots.forEach(d=>d.addEventListener('click',()=>goArea(+d.dataset.go)));
+  document.querySelectorAll('[data-go]').forEach(el=>el.addEventListener('click',(e)=>{e.preventDefault();goArea(+el.dataset.go);}));
+  document.querySelectorAll('[data-go-nav]').forEach(el=>el.addEventListener('click',(e)=>{e.preventDefault();goArea(+el.dataset.goNav);}));
+  renderArea();
+
+  const modal=document.getElementById('nda-modal');
+  const check=document.getElementById('check-nda');
+  const btnConfirm=document.getElementById('confirm-nda');
+  const labelArea=document.getElementById('nda-area-label');
+  let selectedArea='';
+  const closeNDA=()=>modal.classList.remove('open');
+  document.querySelectorAll('[data-nda]').forEach(btn=>{
+    btn.addEventListener('click',(e)=>{e.preventDefault();selectedArea=btn.dataset.nda;labelArea.textContent=selectedArea;check.checked=false;btnConfirm.disabled=true;modal.classList.add('open');});
+  });
+  check.addEventListener('change',()=>{btnConfirm.disabled=!check.checked;});
+  document.getElementById('close-nda').addEventListener('click',closeNDA);
+  document.getElementById('cancel-nda').addEventListener('click',closeNDA);
+  modal.addEventListener('click',(e)=>{if(e.target===modal) closeNDA();});
+  btnConfirm.addEventListener('click',()=>{
+    closeNDA();
+    const fb=document.getElementById('teaser-feedback');
+    fb.style.display='block'; fb.textContent=`CONFIDENTIAL NDA ACCEPTED — TEASER: ${selectedArea}`;
+    document.getElementById('contacto').scrollIntoView({behavior:'smooth'});
+  });
+
+  document.querySelectorAll('[data-lang]').forEach(b=>{
+    b.addEventListener('click',()=>{
+      document.querySelectorAll('[data-lang]').forEach(x=>x.classList.remove('active'));
+      b.classList.add('active');
+      localStorage.setItem('rgma_lang',b.dataset.lang);
+    });
+  });
+})();
+</script>
+</body>
+</html>
