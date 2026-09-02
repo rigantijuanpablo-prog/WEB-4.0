@@ -21,21 +21,22 @@ body{font-family:'Inter',sans-serif;background:var(--paper);color:#111;-webkit-f
 .lang-switch button{background:transparent;border:1px solid rgba(182,160,136,.25);color:#fff;font-size:9px;letter-spacing:2px;padding:6px 10px;cursor:pointer}
 .lang-switch button.active{background:var(--gold);color:var(--navy);border-color:var(--gold)}
 .top-link{color:#fff;text-decoration:none;font-weight:500}
-/* HERO CORREGIDO - DIAGONAL TERMINA EN ANGULO DERECHO + ESPACIADO CORREGIDO */
-.hero{position:relative;height:92vh;min-height:700px;background:var(--navy);overflow:hidden;isolation:isolate}
-.hero::before{content:"";position:absolute;left:0;right:0;bottom:-1px;height:142px;background:var(--gold);clip-path:polygon(0 42%, 100% 100%, 100% 100%, 0 100%);z-index:5;pointer-events:none}
-.hero::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:140px;background:var(--paper);clip-path:polygon(0 42%, 100% 100%, 100% 100%, 0 100%);z-index:6;pointer-events:none}
+
+/* HERO FINAL - DIAGONAL FINA COMO WEB PRINCIPAL */
+.hero{position:relative;height:84vh;min-height:680px;background:var(--navy);overflow:hidden;isolation:isolate}
+.hero::before{content:"";position:absolute;left:-5%;right:-5%;bottom:92px;height:1px;background:var(--gold);transform:rotate(-2.8deg);transform-origin:center;z-index:7;pointer-events:none}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:72px;background:var(--paper);clip-path:polygon(0 38%, 100% 100%, 100% 100%, 0 100%);z-index:6;pointer-events:none}
 .slide{position:absolute;inset:0;display:flex;opacity:0;visibility:hidden;transition:opacity .9s;pointer-events:none}
 .slide.active{opacity:1;visibility:visible;pointer-events:auto;z-index:2}
-.s-left{width:42%;display:flex;flex-direction:column;justify-content:center;padding:90px 5% 90px 6%;background:var(--navy);position:relative;z-index:10}
+.s-left{width:42%;display:flex;flex-direction:column;justify-content:center;padding:110px 5% 110px 6%;background:var(--navy);position:relative;z-index:10}
 .s-right{width:58%;position:relative;overflow:hidden;background:var(--navy)}
 .s-right img{width:100%;height:100%;object-fit:cover;display:block}
-.eyebrow{font-size:10px;letter-spacing:4px;text-transform:uppercase;color:#8aa0c8;margin-bottom:24px}
-.title{font-family:'Cormorant Garamond',serif;font-size:clamp(32px,3.8vw,54px);line-height:.95;font-weight:300;color:#fff;margin-bottom:20px;min-height:168px;display:flex;flex-direction:column;justify-content:center}
-.desc{font-size:14px;line-height:1.7;color:rgba(255,255,255,.62);max-width:380px;margin-bottom:26px;font-weight:300;min-height:56px}
-.cta{display:inline-flex;align-items:center;gap:8px;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);border:1px solid rgba(182,160,136,.35);padding:14px 28px;text-decoration:none;transition:.35s;background:transparent;width:fit-content;min-width:220px;margin-bottom:32px}
+.eyebrow{font-size:10px;letter-spacing:4px;text-transform:uppercase;color:#8aa0c8;margin-bottom:32px}
+.title{font-family:'Cormorant Garamond',serif;font-size:clamp(32px,3.8vw,54px);line-height:.95;font-weight:300;color:#fff;margin-bottom:20px}
+.desc{font-size:14px;line-height:1.7;color:rgba(255,255,255,.62);max-width:380px;margin-bottom:24px;font-weight:300}
+.cta{display:inline-flex;align-items:center;gap:8px;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);border:1px solid rgba(182,160,136,.35);padding:14px 28px;text-decoration:none;transition:.35s;background:transparent;width:fit-content;min-width:220px;margin-bottom:24px}
 .cta:hover{background:var(--gold);color:var(--navy)}
-.nav-hero{position:absolute;bottom:155px;left:6%;z-index:20;display:flex;align-items:center;gap:22px}
+.nav-hero{position:relative;z-index:20;display:flex;align-items:center;gap:22px;margin-top:16px}
 .nav-arrows{display:flex;gap:1px;background:rgba(255,255,255,.1)}
 .arr{width:44px;height:44px;background:var(--navy);color:rgba(255,255,255,.6);border:1px solid rgba(255,255,255,.12);cursor:pointer;display:grid;place-items:center;font-size:18px}
 .arr:hover{background:var(--gold);color:var(--navy)}
@@ -69,12 +70,11 @@ body{font-family:'Inter',sans-serif;background:var(--paper);color:#111;-webkit-f
       <a href="#contacto" class="top-link">CONTACT</a>
     </div>
   </div>
-  <div class="slide active"><div class="s-left"><span class="eyebrow">01 — ENERGY & RIGI</span><h1 class="title">Excellence<br>advisory in<br>energy</h1><p class="desc">Vaca Muerta and Patagonian wind under RIGI. 30 years fiscal stability and Delaware ↔ Neuquén structure.</p><a class="cta" href="#areas" data-go="0">Explore RIGI</a></div><div class="s-right"><img src="vaca-muerta-a.jpg" alt="Vaca Muerta"></div></div>
-  <div class="slide"><div class="s-left"><span class="eyebrow">02 — AGRO & REAL ASSETS</span><h1 class="title">From Delaware<br>to Rosario<br>in USD</h1><p class="desc">Agricultural trusts, tokenization and amnesty Law 27.743. 48hs due diligence.</p><a class="cta" href="#areas" data-go="1">View agro</a></div><div class="s-right"><img src="agro-silos.webp" alt="Agro"></div></div>
-  <div class="slide"><div class="s-left"><span class="eyebrow">03 — LITHIUM & MINING</span><h1 class="title">Lithium Triangle<br>without fiscal<br>friction</h1><p class="desc">21% global reserves. 0% retentions under RIGI, stable royalties and Jujuy-Salta SPV in USD.</p><a class="cta" href="#areas" data-go="2">View mining</a></div><div class="s-right"><img src="litio-jujuy.webp" alt="Lithium"></div></div>
-  <div class="slide"><div class="s-left"><span class="eyebrow">04 — FISHING & BLUE ECONOMY</span><h1 class="title">Fishing and ITQ<br>quota with<br>legal security</h1><p class="desc">Fleet, plants and JV under Law 24.922. Transferable quotas, RIGI processing and rebates.</p><a class="cta" href="#areas" data-go="3">View fishing structure</a></div><div class="s-right"><img src="pesca-altura.webp" alt="Fishing"></div></div>
-  <div class="slide"><div class="s-left"><span class="eyebrow">05 — LOGISTICS & PORTS</span><h1 class="title">Waterway and ports<br>RIGI with free<br>USD</h1><p class="desc">Paraná terminals, 80% of exports. RIGI port with free FX and 0% rate.</p><a class="cta" href="#areas" data-go="4">View logistics</a></div><div class="s-right"><img src="pueto-rosario-a.webp" alt="Ports"></div></div>
-  <div class="nav-hero"><div class="nav-arrows"><button class="arr" data-action="prev">‹</button><button class="arr" data-action="next">›</button></div><div id="dots" class="dots"></div><div id="counter" class="counter">01 — 05</div></div>
+  <div class="slide active"><div class="s-left"><span class="eyebrow">01 — ENERGY & RIGI</span><h1 class="title">Excellence<br>advisory in<br>energy</h1><p class="desc">Vaca Muerta and Patagonian wind under RIGI. 30 years fiscal stability and Delaware ↔ Neuquén structure.</p><a class="cta" href="#areas" data-go="0">Explore RIGI</a><div class="nav-hero"><div class="nav-arrows"><button class="arr" data-action="prev">‹</button><button class="arr" data-action="next">›</button></div><div id="dots" class="dots"></div><div id="counter" class="counter">01 — 05</div></div></div><div class="s-right"><img src="vaca-muerta-a.jpg" alt="Vaca Muerta"></div></div>
+  <div class="slide"><div class="s-left"><span class="eyebrow">02 — AGRO & REAL ASSETS</span><h1 class="title">From Delaware<br>to Rosario<br>in USD</h1><p class="desc">Agricultural trusts, tokenization and amnesty Law 27.743. 48hs due diligence.</p><a class="cta" href="#areas" data-go="1">View agro</a><div class="nav-hero"><div class="nav-arrows"><button class="arr" data-action="prev">‹</button><button class="arr" data-action="next">›</button></div><div class="dots"></div><div class="counter">02 — 05</div></div></div><div class="s-right"><img src="agro-silos.webp" alt="Agro"></div></div>
+  <div class="slide"><div class="s-left"><span class="eyebrow">03 — LITHIUM & MINING</span><h1 class="title">Lithium Triangle<br>without fiscal<br>friction</h1><p class="desc">21% global reserves. 0% retentions under RIGI, stable royalties and Jujuy-Salta SPV in USD.</p><a class="cta" href="#areas" data-go="2">View mining</a><div class="nav-hero"><div class="nav-arrows"><button class="arr" data-action="prev">‹</button><button class="arr" data-action="next">›</button></div><div class="dots"></div><div class="counter">03 — 05</div></div></div><div class="s-right"><img src="litio-jujuy.webp" alt="Lithium"></div></div>
+  <div class="slide"><div class="s-left"><span class="eyebrow">04 — FISHING & BLUE ECONOMY</span><h1 class="title">Fishing and ITQ<br>quota with<br>legal security</h1><p class="desc">Fleet, plants and JV under Law 24.922. Transferable quotas, RIGI processing and rebates.</p><a class="cta" href="#areas" data-go="3">View fishing structure</a><div class="nav-hero"><div class="nav-arrows"><button class="arr" data-action="prev">‹</button><button class="arr" data-action="next">›</button></div><div class="dots"></div><div class="counter">04 — 05</div></div></div><div class="s-right"><img src="pesca-altura.webp" alt="Fishing"></div></div>
+  <div class="slide"><div class="s-left"><span class="eyebrow">05 — LOGISTICS & PORTS</span><h1 class="title">Waterway and ports<br>RIGI with free<br>USD</h1><p class="desc">Paraná terminals, 80% of exports. RIGI port with free FX and 0% rate.</p><a class="cta" href="#areas" data-go="4">View logistics</a><div class="nav-hero"><div class="nav-arrows"><button class="arr" data-action="prev">‹</button><button class="arr" data-action="next">›</button></div><div class="dots"></div><div class="counter">05 — 05</div></div></div><div class="s-right"><img src="pueto-rosario-a.webp" alt="Ports"></div></div>
 </div>
 <nav class="sticky-nav"><div class="nav-inner"><a href="index.html" class="logo"><img src="logo-negro-parafondosclaros.webp" alt="RGMA"> RGMA ARGENTINA DESK</a><div class="menu"><a class="m-link active-gold" href="index.html">INICIO</a><a class="m-link" href="#filosofia">The Firm</a><a class="m-link" href="#areas">Vehicles</a><div class="dropdown"><span class="m-link dropdown-trigger">AREAS</span><div class="dropdown-menu"><a href="#" data-go-nav="0"><span>01 — ENERGÍA</span><i>→</i></a><a href="#" data-go-nav="1"><span>02 — AGRONEGOCIOS</span><i>→</i></a><a href="#" data-go-nav="2"><span>03 — MINERÍA</span><i>→</i></a><a href="#" data-go-nav="3"><span>04 — PESCA</span><i>→</i></a><a href="#" data-go-nav="4"><span>05 — LOGÍSTICA</span><i>→</i></a><div class="footer-cta">VER ESTRUCTURA + TEASER NDA</div></div></div><a class="m-link" href="#contacto">Contact</a></div></div></nav>
 
@@ -167,9 +167,11 @@ body{font-family:'Inter',sans-serif;background:var(--paper);color:#111;-webkit-f
   let cur=0,tHero=null;
   const renderHero=()=>{
     slides.forEach((s,i)=>s.classList.toggle('active',i===cur));
-    dots.innerHTML='';
-    slides.forEach((_,i)=>{const b=document.createElement('button');b.className='dot'+(i===cur?' active':'');b.onclick=()=>goHero(i);dots.appendChild(b);});
-    counter.textContent=`0${cur+1} — 0${slides.length}`;
+    if(dots){
+      dots.innerHTML='';
+      slides.forEach((_,i)=>{const b=document.createElement('button');b.className='dot'+(i===cur?' active':'');b.onclick=()=>goHero(i);dots.appendChild(b);});
+    }
+    if(counter) counter.textContent=`0${cur+1} — 0${slides.length}`;
   };
   const goHero=(n)=>{cur=(n+slides.length)%slides.length;renderHero();restartHero();};
   const restartHero=()=>{clearInterval(tHero);tHero=setInterval(()=>goHero(cur+1),10000);};
@@ -196,19 +198,19 @@ body{font-family:'Inter',sans-serif;background:var(--paper);color:#111;-webkit-f
   const labelArea=document.getElementById('nda-area-label');
   let selectedArea='';
   const closeNDA=()=>modal.classList.remove('open');
-  document.querySelectorAll('[data-nda]').forEach(btn=>{btn.addEventListener('click',(e)=>{e.preventDefault();selectedArea=btn.dataset.nda;labelArea.textContent=selectedArea;check.checked=false;btnConfirm.disabled=true;modal.classList.add('open');});});
-  check.addEventListener('change',()=>{btnConfirm.disabled=!check.checked;});
+  document.querySelectorAll('[data-nda]').forEach(btn=>{btn.addEventListener('click',(e)=>{e.preventDefault();selectedArea=btn.dataset.nda;if(labelArea)labelArea.textContent=selectedArea;if(check)check.checked=false;if(btnConfirm)btnConfirm.disabled=true;modal.classList.add('open');});});
+  if(check) check.addEventListener('change',()=>{if(btnConfirm)btnConfirm.disabled=!check.checked;});
   document.getElementById('close-nda').addEventListener('click',closeNDA);
   document.getElementById('cancel-nda').addEventListener('click',closeNDA);
   modal.addEventListener('click',(e)=>{if(e.target===modal)closeNDA();});
-  btnConfirm.addEventListener('click',()=>{
+  if(btnConfirm) btnConfirm.addEventListener('click',()=>{
     closeNDA();
     const fb=document.getElementById('teaser-feedback');
     const sel=document.getElementById('input-area');
     const msg=document.getElementById('input-msg');
     if(sel)sel.value=selectedArea;
     if(msg)msg.value=`Confidential Teaser Requested — Area: ${selectedArea}. NDA accepted online.`;
-    fb.style.display='block';fb.textContent=`CONFIDENTIAL NDA ACCEPTED — TEASER: ${selectedArea}`;
+    if(fb){fb.style.display='block';fb.textContent=`CONFIDENTIAL NDA ACCEPTED — TEASER: ${selectedArea}`;}
     document.getElementById('contacto').scrollIntoView({behavior:'smooth'});
   });
 })();
