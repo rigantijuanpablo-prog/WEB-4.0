@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Familia y Sucesiones | RGMA — Since 1948</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0A1931;--ink:#111827;--muted:#6B7280;--line:#E8E2D6;--paper:#FCFBF9;--gold:#C8B090;--gold-strong:#B6A088}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',sans-serif;background:var(--paper);color:var(--ink);line-height:1.75;-webkit-font-smoothing:antialiased}
+.header{max-width:1320px;margin:0 auto;padding:32px 48px;display:flex;justify-content:space-between;border-bottom:1px solid var(--line);gap:24px}
+.header-left h1{font-family:'Cormorant Garamond',serif;font-size:38px;font-weight:300;color:var(--navy);margin-top:12px;line-height:1.05}
+.top-utils{display:flex;gap:18px;margin-bottom:16px;align-self:flex-end;align-items:center}
+.lang{display:flex;border:1px solid var(--line);padding:2px;background:#fff}
+.lang button{border:0;background:transparent;font-size:9px;letter-spacing:2px;font-weight:700;padding:6px 10px;color:var(--muted);cursor:pointer;transition:.3s}
+.lang button.active{background:var(--navy);color:#fff}
+.logo{font-family:'Cormorant Garamond',serif;font-size:22px;letter-spacing:5px;font-weight:600;color:var(--navy)}
+.logo-icon{width:58px;height:auto;display:block;margin-top:12px}
+.tabs-wrap{background:var(--navy)}
+.tabs{max-width:1320px;margin:0 auto;padding:0 48px;display:flex;gap:40px}
+.tabs a{color:rgba(255,255,255,.55);text-decoration:none;font-size:10px;letter-spacing:2.5px;font-weight:600;padding:20px 0;border-bottom:1px solid transparent;cursor:pointer;transition:.4s}
+.tabs a.active{color:#fff;border-bottom-color:var(--gold)}
+.layout{max-width:1320px;margin:0 auto;padding:64px 48px 80px;display:grid;grid-template-columns:1.35fr 0.65fr;gap:88px}
+.lead{font-family:'Cormorant Garamond',serif;font-size:24px;color:var(--navy);font-style:italic;border-left:1px solid var(--gold);padding-left:24px;margin-bottom:42px;line-height:1.4}
+.list{list-style:none}
+.list li{padding:20px 0;border-bottom:1px solid #F0EBE0;display:flex;flex-direction:column;gap:6px;transition:.3s}
+.list li:hover{padding-left:4px;background:rgba(255,255,255,.6)}
+.t{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:400;color:var(--navy);letter-spacing:0.01em}
+.d{font-size:13.5px;line-height:1.65;color:var(--muted);font-weight:300;margin-top:2px}
+.side{position:sticky;top:40px;align-self:start}
+.contact-card{background:#fff;border:1px solid var(--line)}
+.contact-head{padding:20px 26px 16px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center}
+.btn{display:block;text-align:center;padding:14px;font-size:10px;letter-spacing:2.5px;text-decoration:none;font-weight:700;background:var(--navy);color:#fff;text-transform:uppercase;transition:.4s}
+.btn:hover{background:#000;transform:translateY(-1px)}
+.contact-foot{padding:18px 26px;background:#FCFBF9;border-top:1px solid var(--line)}
+.socio{padding:26px;display:flex;gap:18px;align-items:center}
+.socio-photo{width:84px;height:84px;background:#F3F1ED;border:1px solid var(--line);overflow:hidden;flex-shrink:0}
+.socio-photo img{width:100%;height:100%;object-fit:cover;display:block}
+/* FOOTER IGUAL A INVERSIONES */
+.footer-rgma{background:#0A1931;padding:60px 48px 0;color:#fff;margin-top:40px}
+.footer-inner{max-width:1320px;margin:0 auto;display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:40px;padding-bottom:50px;border-bottom:1px solid rgba(255,255,255,.08)}
+.footer-inner span{font-size:9px;letter-spacing:2.5px;color:var(--gold-strong);text-transform:uppercase;display:block;margin-bottom:14px;font-weight:700}
+.footer-inner p{font-size:12px;line-height:1.7;color:rgba(255,255,255,.55)}
+.footer-bottom{text-align:center;padding:20px;font-size:9px;letter-spacing:2px;color:rgba(255,255,255,.3);text-transform:uppercase}
+@media(max-width:900px){.header{padding:24px;flex-direction:column}.tabs{padding:0 24px;gap:20px;overflow:auto}.layout{padding:32px 24px;grid-template-columns:1fr;gap:40px}.side{position:relative;top:0}.footer-rgma{padding:40px 24px 0}.footer-inner{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="header">
+  <div class="header-left">
+    <div style="font-size:9px;letter-spacing:4px;color:var(--gold);font-weight:600;text-transform:uppercase;" data-es="Área de Práctica · 03" data-en="Practice Area · 03">Área de Práctica · 03</div>
+    <h1 data-es="Derecho de Familia<br>y Sucesiones" data-en="Family &<br>Succession Law">Derecho de Familia<br>y Sucesiones</h1>
+  </div>
+  <div style="display:flex;flex-direction:column;align-items:center">
+    <div class="top-utils"><div class="lang"><button id="btn-es" class="active" onclick="setLang('es')">ES</button><button id="btn-en" onclick="setLang('en')">EN</button></div><div class="logo">RGMA</div></div>
+    <img src="logo-negro-parafondosclaros.webp" class="logo-icon" alt="RGMA">
+  </div>
+</header>
+<div class="tabs-wrap"><nav class="tabs"><a class="active" data-es="INFORMACIÓN GENERAL" data-en="OVERVIEW">INFORMACIÓN GENERAL</a><a data-es="CONTACTO" data-en="CONTACT" href="#contacto">CONTACTO</a></nav></div>
+<main class="layout">
+  <div>
+    <div class="lead" data-es="Protección de la familia, el patrimonio y la voluntad personal con estrategia jurídica y sensibilidad humana." data-en="Protection of family, assets and personal will with legal strategy and human sensitivity.">Protección de la familia, el patrimonio y la voluntad personal con estrategia jurídica y sensibilidad humana.</div>
+    <ul class="list">
+      <li><div class="t" data-es="Divorcio unilateral y bilateral" data-en="Unilateral and bilateral divorce">Divorcio unilateral y bilateral</div><div class="d" data-es="Convenio regulador art. 438 CCyC, atribución vivienda, compensación económica art. 441 CCyC." data-en="Regulatory agreement art. 438 CCyC, home attribution, economic compensation art. 441 CCyC.">Convenio regulador art. 438 CCyC, atribución vivienda, compensación económica art. 441 CCyC.</div></li>
+      <li><div class="t" data-es="Alimentos" data-en="Child & spousal support">Alimentos</div><div class="d" data-es="Fijación, aumento, reducción, ejecución, alimentos provisorios, índice crianza." data-en="Fixation, increase, reduction, enforcement, provisional support, parenting index.">Fijación, aumento, reducción, ejecución, alimentos provisorios, índice crianza.</div></li>
+      <li><div class="t" data-es="Cuidado personal y comunicación" data-en="Custody and visitation">Cuidado personal y comunicación</div><div class="d" data-es="Cuidado unilateral/compartido, plan parentalidad, régimen comunicación, impedimento contacto." data-en="Sole/joint custody, parenting plan, visitation schedule, contact obstruction.">Cuidado unilateral/compartido, plan parentalidad, régimen comunicación, impedimento contacto.</div></li>
+      <li><div class="t" data-es="Violencia familiar y protección" data-en="Domestic violence & protection">Violencia familiar y protección</div><div class="d" data-es="Ley 26.485, medidas cautelares exclusión hogar, perimetral, Ley 12.569 PBA." data-en="Law 26.485, restraining orders, exclusion from home, protective measures.">Ley 26.485, medidas cautelares exclusión hogar, perimetral, Ley 12.569 PBA.</div></li>
+      <li><div class="t" data-es="Régimen patrimonial matrimonio" data-en="Marital property">Régimen patrimonial matrimonio</div><div class="d" data-es="Comunidad, separación bienes, convenciones art. 446 CCyC, liquidación comunidad." data-en="Community, separation of property, prenups art. 446 CCyC, liquidation.">Comunidad, separación bienes, convenciones art. 446 CCyC, liquidación comunidad.</div></li>
+      <li><div class="t" data-es="Uniones convivenciales" data-en="Cohabitation unions">Uniones convivenciales</div><div class="d" data-es="Pacto convivencia art. 513 CCyC, protección vivienda art. 522 CCyC, compensación." data-en="Cohabitation agreement art. 513 CCyC, home protection art. 522 CCyC.">Pacto convivencia art. 513 CCyC, protección vivienda art. 522 CCyC, compensación.</div></li>
+      <li><div class="t" data-es="Filiación y adopción" data-en="Filiation & adoption">Filiación y adopción</div><div class="d" data-es="Filiación por naturaleza, técnicas reproducción, impugnación, adopción plena y simple." data-en="Filiation by nature, ART, challenge, full and simple adoption.">Filiación por naturaleza, técnicas reproducción, impugnación, adopción plena y simple.</div></li>
+      <li><div class="t" data-es="Sucesiones ab intestato" data-en="Intestate successions">Sucesiones ab intestato</div><div class="d" data-es="Declaratoria herederos, inventario, avalúo, partición, administración judicial." data-en="Declaration of heirs, inventory, appraisal, partition, judicial administration.">Declaratoria herederos, inventario, avalúo, partición, administración judicial.</div></li>
+      <li><div class="t" data-es="Sucesiones testamentarias" data-en="Testate successions">Sucesiones testamentarias</div><div class="d" data-es="Testamento ológrafo y acto público, legítima art. 2445 CCyC, mejora heredero, albacea." data-en="Holographic and public will, forced heirship art. 2445 CCyC, heir improvement, executor.">Testamento ológrafo y acto público, legítima art. 2445 CCyC, mejora heredero, albacea.</div></li>
+      <li><div class="t" data-es="Planificación sucesoria" data-en="Succession planning">Planificación sucesoria</div><div class="d" data-es="Donación con reserva usufructo, fideicomiso testamentario, empresa familiar, protocolo." data-en="Donation with usufruct reserve, testamentary trust, family business.">Donación con reserva usufructo, fideicomiso testamentario, empresa familiar, protocolo.</div></li>
+      <li><div class="t" data-es="Sucesiones internacionales" data-en="International successions">Sucesiones internacionales</div><div class="d" data-es="Conflicto leyes, bienes en exterior, repatriación activos, doble imposición." data-en="Conflict of laws, assets abroad, asset repatriation, double taxation.">Conflicto leyes, bienes en exterior, repatriación activos, doble imposición.</div></li>
+      <li><div class="t" data-es="Determinación capacidad" data-en="Capacity determination">Determinación capacidad</div><div class="d" data-es="Apoyos art. 32 CCyC, curatela, inhabilidad, directivas médicas anticipadas." data-en="Support measures art. 32 CCyC, guardianship, advance medical directives.">Apoyos art. 32 CCyC, curatela, inhabilidad, directivas médicas anticipadas.</div></li>
+    </ul>
+  </div>
+  <aside class="side">
+    <div class="contact-card" id="contacto">
+      <div class="contact-head"><span data-es="CONTACTO" data-en="CONTACT" style="font-size:10px;letter-spacing:2px;font-weight:600;color:var(--navy)">CONTACTO</span><span style="font-size:10px;letter-spacing:1.5px;color:var(--gold);font-weight:600;text-transform:uppercase">Socio Directo</span></div>
+      <div class="socio"><div class="socio-photo"><img src="socio-familia.jpg" alt="Partner"></div><div><div style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:400;color:var(--navy);line-height:1.2;margin-bottom:2px">Dra. [Nombre]</div><div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);font-weight:500">Socio · Familia</div></div></div>
+      <div class="contact-foot"><a href="#contacto" class="btn" data-es="SOLICITAR CONSULTA PRIVADA" data-en="REQUEST PRIVATE SESSION">SOLICITAR CONSULTA PRIVADA</a></div>
+    </div>
+  </aside>
+</main>
+<footer class="footer-rgma">
+  <div class="footer-inner">
+    <div><div class="logo" style="color:#fff;letter-spacing:5px">RGMA</div><p style="margin-top:16px;max-width:280px">Legal architecture for real assets and family protection. Since 1948.</p></div>
+    <div><span>OFFICES</span><p>Buenos Aires — CABA<br>Neuquén — Vaca Muerta Desk<br>Delaware — US Structure</p></div>
+    <div><span>CONFIDENTIAL</span><p>Information subject to due diligence. Private consultation only.</p></div>
+  </div>
+  <div class="footer-bottom">© 2026 RGMA Argentina Desk. All rights reserved. — Privacy — Terms</div>
+</footer>
+<script>
+function setLang(l){
+ document.documentElement.lang=l;
+ localStorage.setItem('rgma_lang',l);
+ document.getElementById('btn-es').classList.toggle('active',l==='es');
+ document.getElementById('btn-en').classList.toggle('active',l==='en');
+ document.querySelectorAll('[data-es]').forEach(e=>{
+   const h=e.getAttribute('data-'+l);
+   if(h) e.innerHTML=h;
+ });
+}
+setLang(localStorage.getItem('rgma_lang') || 'es');
+</script>
+</body>
+</html>
