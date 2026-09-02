@@ -8,11 +8,11 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
 <style>
-:root{--navy:#0A1931;--gold:#B6A088;--paper:#FCFBF9}
+:root{--navy:#0A1931;--gold:#B6A088;--paper:#FCFBF9;--ease:cubic-bezier(0.2,0.8,0.2,1)}
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:'Inter',sans-serif;background:var(--paper);color:#111;-webkit-font-smoothing:antialiased}
 
-/* TOP BAR */
+/* TOP BAR OSCURO */
 .top-bar{position:absolute;inset:0 0 auto 0;z-index:30;display:flex;justify-content:space-between;align-items:center;padding:18px 40px;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:#fff;background:rgba(10,25,49,.88);backdrop-filter:blur(12px);border-bottom:1px solid rgba(182,160,136,.15)}
 .top-brand{display:flex;align-items:center;gap:16px;color:var(--gold);font-weight:600;text-decoration:none}
 .top-brand-line{width:1px;height:18px;background:rgba(255,255,255,.2);display:inline-block}
@@ -24,21 +24,21 @@ body{font-family:'Inter',sans-serif;background:var(--paper);color:#111;-webkit-f
 .lang-switch button.active{background:var(--gold);color:var(--navy);border-color:var(--gold)}
 .top-link{color:#fff;text-decoration:none;font-weight:500}
 
-/* HERO - DIAGONAL AL ANGULO DERECHO */
+/* HERO - DIAGONAL CORREGIDA TERMINA EN ANGULO DERECHO */
 .hero{position:relative;height:88vh;min-height:720px;background:var(--navy);overflow:hidden;isolation:isolate}
-.hero::before{content:"";position:absolute;left:0;right:0;bottom:-1px;height:160px;background:var(--gold);clip-path:polygon(0 35%, 100% 100%, 100% 100%, 0 100%);z-index:5;pointer-events:none}
-.hero::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:158px;background:var(--paper);clip-path:polygon(0 35%, 100% 100%, 100% 100%, 0 100%);z-index:6;pointer-events:none}
+.hero::before{content:"";position:absolute;left:0;right:0;bottom:0;height:72px;background:var(--gold);clip-path:polygon(0 0, 100% 100%, 100% 100%, 0 100%);z-index:5;pointer-events:none}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:70px;background:var(--paper);clip-path:polygon(0 0, 100% 100%, 100% 100%, 0 100%);z-index:6;pointer-events:none}
 .slide{position:absolute;inset:0;display:flex;opacity:0;visibility:hidden;transition:opacity .9s;pointer-events:none}
 .slide.active{opacity:1;visibility:visible;pointer-events:auto;z-index:2}
-.s-left{width:42%;display:flex;flex-direction:column;justify-content:center;padding:140px 5% 160px 6%;background:var(--navy);position:relative;z-index:10}
+.s-left{width:42%;display:flex;flex-direction:column;justify-content:flex-start;padding:150px 5% 0 6%;background:var(--navy);position:relative;z-index:10}
 .s-right{width:58%;position:relative;overflow:hidden;background:var(--navy)}
 .s-right img{width:100%;height:100%;object-fit:cover;display:block}
 .eyebrow{font-size:10px;letter-spacing:4px;text-transform:uppercase;color:#8aa0c8;margin-bottom:28px}
 .title{font-family:'Cormorant Garamond',serif;font-size:clamp(32px,3.8vw,54px);line-height:.95;font-weight:300;color:#fff;margin-bottom:22px;min-height:168px;display:flex;flex-direction:column;justify-content:center}
-.desc{font-size:14px;line-height:1.7;color:rgba(255,255,255,.62);max-width:380px;margin-bottom:32px;font-weight:300;min-height:56px}
-.cta{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);border:1px solid rgba(182,160,136,.35);padding:14px 28px;text-decoration:none;transition:.35s;background:transparent;width:fit-content;min-width:220px}
+.desc{font-size:14px;line-height:1.7;color:rgba(255,255,255,.62);max-width:380px;margin-bottom:28px;font-weight:300;min-height:56px}
+.cta{display:inline-flex;align-items:center;gap:8px;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);border:1px solid rgba(182,160,136,.35);padding:14px 28px;text-decoration:none;transition:.35s;background:transparent;width:fit-content;min-width:220px;margin-bottom:36px}
 .cta:hover{background:var(--gold);color:var(--navy)}
-.nav-hero{position:absolute;bottom:95px;left:6%;z-index:10;display:flex;align-items:center;gap:22px}
+.nav-hero{position:relative;z-index:10;display:flex;align-items:center;gap:22px;margin-top:auto;padding-bottom:110px}
 .nav-arrows{display:flex;gap:1px;background:rgba(255,255,255,.1)}
 .arr{width:44px;height:44px;background:var(--navy);color:rgba(255,255,255,.6);border:1px solid rgba(255,255,255,.12);cursor:pointer;display:grid;place-items:center;font-size:18px}
 .arr:hover{background:var(--gold);color:var(--navy)}
@@ -47,7 +47,7 @@ body{font-family:'Inter',sans-serif;background:var(--paper);color:#111;-webkit-f
 .dot.active{background:var(--gold);width:56px}
 .counter{color:rgba(255,255,255,.3);font-size:10px;letter-spacing:3px}
 
-/* STICKY NAV */
+/* STICKY NAV - ISOLOGO FIX */
 .sticky-nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.97);backdrop-filter:blur(12px);border-bottom:1px solid #E8E2D6}
 .nav-inner{max-width:1280px;margin:0 auto;padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between}
 .logo{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:13px;letter-spacing:.5px;color:#0A1931;display:flex;align-items:center;gap:12px;text-decoration:none}
@@ -116,7 +116,12 @@ body{font-family:'Inter',sans-serif;background:var(--paper);color:#111;-webkit-f
 .footer-inner span{font-size:9px;letter-spacing:2.5px;color:var(--gold);text-transform:uppercase;display:block;margin-bottom:14px;font-weight:700}
 .footer-inner p{font-size:12px;line-height:1.7;color:rgba(255,255,255,.55)}
 .footer-bottom{text-align:center;padding:20px;font-size:9px;letter-spacing:2px;color:rgba(255,255,255,.3);text-transform:uppercase}
-@media(max-width:1024px){.s-left{width:100%;padding:100px 24px 140px}.s-right{display:none}.a-slide{grid-template-columns:1fr;padding:48px 24px;gap:32px}.menu{display:none}.top-bar{padding:12px 16px;flex-wrap:wrap;gap:10px}.contact-inner,.footer-inner{grid-template-columns:1fr}.nav-hero{bottom:70px !important}} 
+@media(max-width:1024px){
+.s-left{width:100%;padding:100px 24px 0}.s-right{display:none}
+.a-slide{grid-template-columns:1fr;padding:48px 24px;gap:32px}
+.menu{display:none}.top-bar{padding:12px 16px;flex-wrap:wrap;gap:10px}
+.contact-inner,.footer-inner{grid-template-columns:1fr}
+}
 </style>
 </head>
 <body>
@@ -131,13 +136,11 @@ body{font-family:'Inter',sans-serif;background:var(--paper);color:#111;-webkit-f
     </div>
   </div>
 
-  <div class="slide active"><div class="s-left"><span class="eyebrow">01 — ENERGY & RIGI</span><h1 class="title">Excellence<br>advisory in<br>energy</h1><p class="desc">Vaca Muerta and Patagonian wind under RIGI. 30 years fiscal stability and Delaware ↔ Neuquén structure.</p><a class="cta" href="#areas" data-go="0">Explore RIGI</a></div><div class="s-right"><img src="vaca-muerta.webp" alt="Vaca Muerta"></div></div>
-  <div class="slide"><div class="s-left"><span class="eyebrow">02 — AGRO & REAL ASSETS</span><h1 class="title">From Delaware<br>to Rosario<br>in USD</h1><p class="desc">Agricultural trusts, tokenization and amnesty Law 27.743. 48hs due diligence.</p><a class="cta" href="#areas" data-go="1">View agro</a></div><div class="s-right"><img src="agro-silos.webp" alt="Agro"></div></div>
-  <div class="slide"><div class="s-left"><span class="eyebrow">03 — LITHIUM & MINING</span><h1 class="title">Lithium Triangle<br>without fiscal<br>friction</h1><p class="desc">21% global reserves. 0% retentions under RIGI, stable royalties and Jujuy-Salta SPV in USD.</p><a class="cta" href="#areas" data-go="2">View mining</a></div><div class="s-right"><img src="litio-jujuy.webp" alt="Lithium"></div></div>
-  <div class="slide"><div class="s-left"><span class="eyebrow">04 — FISHING & BLUE ECONOMY</span><h1 class="title">Fishing and ITQ<br>quota with<br>legal security</h1><p class="desc">Fleet, plants and JV under Law 24.922. Transferable quotas, RIGI processing and rebates.</p><a class="cta" href="#areas" data-go="3">View fishing structure</a></div><div class="s-right"><img src="pesca-altura.webp" alt="Fishing"></div></div>
-  <div class="slide"><div class="s-left"><span class="eyebrow">05 — LOGISTICS & PORTS</span><h1 class="title">Waterway and ports<br>RIGI with free<br>USD</h1><p class="desc">Paraná terminals, 80% of exports. RIGI port with free FX and 0% rate.</p><a class="cta" href="#areas" data-go="4">View logistics</a></div><div class="s-right"><img src="pueto-rosario-a.webp" alt="Ports"></div></div>
-
-  <div class="nav-hero"><div class="nav-arrows"><button class="arr" data-action="prev">‹</button><button class="arr" data-action="next">›</button></div><div id="dots" class="dots"></div><div id="counter" class="counter">01 — 05</div></div>
+  <div class="slide active"><div class="s-left"><span class="eyebrow">01 — ENERGY & RIGI</span><h1 class="title">Excellence<br>advisory in<br>energy</h1><p class="desc">Vaca Muerta and Patagonian wind under RIGI. 30 years fiscal stability and Delaware ↔ Neuquén structure.</p><a class="cta" href="#areas" data-go="0">Explore RIGI</a><div class="nav-hero"><div class="nav-arrows"><button class="arr" data-action="prev">‹</button><button class="arr" data-action="next">›</button></div><div id="dots" class="dots"></div><div id="counter" class="counter">01 — 05</div></div></div><div class="s-right"><img src="vaca-muerta.webp" alt="Vaca Muerta"></div></div>
+  <div class="slide"><div class="s-left"><span class="eyebrow">02 — AGRO & REAL ASSETS</span><h1 class="title">From Delaware<br>to Rosario<br>in USD</h1><p class="desc">Agricultural trusts, tokenization and amnesty Law 27.743. 48hs due diligence.</p><a class="cta" href="#areas" data-go="1">View agro</a><div class="nav-hero"><div class="nav-arrows"><button class="arr" data-action="prev">‹</button><button class="arr" data-action="next">›</button></div><div class="dots"></div><div class="counter">02 — 05</div></div></div><div class="s-right"><img src="agro-silos.webp" alt="Agro"></div></div>
+  <div class="slide"><div class="s-left"><span class="eyebrow">03 — LITHIUM & MINING</span><h1 class="title">Lithium Triangle<br>without fiscal<br>friction</h1><p class="desc">21% global reserves. 0% retentions under RIGI, stable royalties and Jujuy-Salta SPV in USD.</p><a class="cta" href="#areas" data-go="2">View mining</a><div class="nav-hero"><div class="nav-arrows"><button class="arr" data-action="prev">‹</button><button class="arr" data-action="next">›</button></div><div class="dots"></div><div class="counter">03 — 05</div></div></div><div class="s-right"><img src="litio-jujuy.webp" alt="Lithium"></div></div>
+  <div class="slide"><div class="s-left"><span class="eyebrow">04 — FISHING & BLUE ECONOMY</span><h1 class="title">Fishing and ITQ<br>quota with<br>legal security</h1><p class="desc">Fleet, plants and JV under Law 24.922. Transferable quotas, RIGI processing and rebates.</p><a class="cta" href="#areas" data-go="3">View fishing structure</a><div class="nav-hero"><div class="nav-arrows"><button class="arr" data-action="prev">‹</button><button class="arr" data-action="next">›</button></div><div class="dots"></div><div class="counter">04 — 05</div></div></div><div class="s-right"><img src="pesca-altura.webp" alt="Fishing"></div></div>
+  <div class="slide"><div class="s-left"><span class="eyebrow">05 — LOGISTICS & PORTS</span><h1 class="title">Waterway and ports<br>RIGI with free<br>USD</h1><p class="desc">Paraná terminals, 80% of exports. RIGI port with free FX and 0% rate.</p><a class="cta" href="#areas" data-go="4">View logistics</a><div class="nav-hero"><div class="nav-arrows"><button class="arr" data-action="prev">‹</button><button class="arr" data-action="next">›</button></div><div class="dots"></div><div class="counter">05 — 05</div></div></div><div class="s-right"><img src="pueto-rosario-a.webp" alt="Ports"></div></div>
 </div>
 
 <nav class="sticky-nav"><div class="nav-inner"><a href="index.html" class="logo"><img src="logo-negro-parafondosclaros.webp" alt="RGMA"> RGMA ARGENTINA DESK</a><div class="menu"><a class="m-link active-gold" href="index.html">INICIO</a><a class="m-link" href="#filosofia">The Firm</a><a class="m-link" href="#areas">Vehicles</a><div class="dropdown"><span class="m-link dropdown-trigger">AREAS</span><div class="dropdown-menu"><a href="#" data-go-nav="0"><span>01 — ENERGÍA</span><i>→</i></a><a href="#" data-go-nav="1"><span>02 — AGRONEGOCIOS</span><i>→</i></a><a href="#" data-go-nav="2"><span>03 — MINERÍA</span><i>→</i></a><a href="#" data-go-nav="3"><span>04 — PESCA</span><i>→</i></a><a href="#" data-go-nav="4"><span>05 — LOGÍSTICA</span><i>→</i></a><div class="footer-cta">VER ESTRUCTURA + TEASER NDA</div></div></div><a class="m-link" href="#contacto">Contact</a></div></div></nav>
