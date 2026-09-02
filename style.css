@@ -69,18 +69,26 @@ body.pill-visible .investment-pill-premium{opacity:1;transform:translateX(0);poi
 .mega-grid-simple a:hover{color:var(--dorado);padding-left:6px}
 .mega-grid-simple a:hover .arrow-css{opacity:1;transform:rotate(45deg) translateX(0)}
 
-/* HERO */
+/* HERO - CON DIAGONAL RESTAURADA */
 .hero-principal{position:relative;background:var(--navy);min-height:100vh;display:flex;align-items:center;padding:0 48px;overflow:hidden}
+.hero-principal::after{
+  content:"";position:absolute;bottom:-1px;left:0;width:100%;height:160px;
+  background:var(--blanco);clip-path:polygon(0 45%,100% 100%,100% 100%,0 100%);z-index:4;
+}
+.hero-principal::before{
+  content:"";position:absolute;bottom:158px;left:0;width:100%;height:1.5px;
+  background:var(--dorado);transform:skewY(3.8deg);transform-origin:left;z-index:10;
+}
 .hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1;opacity:0;transition:opacity 1.4s ease}
 .hero-video.is-loaded{opacity:1}
 .hero-overlay{position:absolute;inset:0;z-index:2;background:linear-gradient(90deg,rgba(10,25,49,0.92) 0%,rgba(10,25,49,0.65) 50%,rgba(10,25,49,0.2) 100%)}
-.hero-contenedor-texto{position:relative;z-index:3;max-width:680px;margin-top:-20px}
+.hero-contenedor-texto{position:relative;z-index:5;max-width:680px;margin-top:-20px}
 .hero-eyebrow{font-size:9px;letter-spacing:3.5px;color:var(--dorado);font-weight:600;display:block;margin-bottom:18px;text-transform:uppercase}
 .hero-title-editorial{font-family:'Playfair Display',serif;font-size:56px;line-height:1.08;color:#fff;font-weight:300;margin-bottom:36px;letter-spacing:-0.5px}
 .hero-title-editorial i{font-family:'Lora',serif;font-style:italic;font-weight:300;color:var(--dorado-light)}
 .btn-premium-action{display:inline-flex;align-items:center;border:1px solid var(--dorado);color:#fff;padding:18px 42px;font-size:10px;letter-spacing:3px;text-transform:uppercase;font-weight:700;transition:all .45s var(--ease);text-decoration:none;background:rgba(200,176,144,0.08)}
 .btn-premium-action:hover{background:var(--dorado);color:var(--navy);transform:translateY(-2px);letter-spacing:3.3px}
-.investment-seal-link{position:absolute;bottom:18%;right:4%;z-index:4;text-decoration:none;transition:.4s}
+.investment-seal-link{position:absolute;bottom:18%;right:4%;z-index:5;text-decoration:none;transition:.4s}
 .investment-seal-link:hover{transform:scale(1.05)}
 .investment-seal{width:148px;height:148px;position:relative;display:flex;align-items:center;justify-content:center}
 .seal-content{width:108px;height:108px;background:var(--navy-soft);border:1px solid var(--dorado);border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;box-shadow:0 8px 25px rgba(0,0,0,.45);z-index:3}
@@ -108,8 +116,6 @@ body.pill-visible .investment-pill-premium{opacity:1;transform:translateX(0);poi
 .tarjeta-valor.dark{background:var(--navy);border-left:1.5px solid var(--dorado);padding:32px 28px;margin-top:24px}
 .tarjeta-valor.dark .title-valor-editorial{color:var(--dorado)}
 .tarjeta-valor.dark p{color:rgba(255,255,255,.6)}
-
-/* CIERRE + CONTACTO + FOOTER */
 .barra-flotante-contacto{position:fixed;right:12px;top:42%;transform:translateY(-50%);z-index:999;display:flex;flex-direction:column;gap:1px;border-radius:8px;overflow:hidden}
 .item-flotante{display:flex;align-items:center;justify-content:flex-end;background:var(--navy);color:#fff;height:48px;min-width:48px;border-left:2px solid var(--dorado);padding:0 14px;text-decoration:none;transition:all .35s var(--ease)}
 .item-flotante span{font-size:9px;letter-spacing:2px;max-width:0;opacity:0;overflow:hidden;white-space:nowrap;transition:all .35s var(--ease)}
@@ -148,8 +154,6 @@ body.pill-visible .investment-pill-premium{opacity:1;transform:translateX(0);poi
 .fila-accion-premium{margin-top:12px}
 .btn-enviar-premium{background:var(--navy);color:#fff;border:1px solid var(--navy);padding:16px 36px;font-size:11px;letter-spacing:2.5px;font-weight:700;cursor:pointer;transition:all .4s var(--ease)}
 .btn-enviar-premium:hover{background:transparent;color:var(--navy);letter-spacing:2.8px}
-
-/* FOOTER */
 .footer-rgm-premium{background:#070b14;padding:80px 48px 0;border-top:1px solid rgba(200,176,144,0.15)}
 .footer-inner-editorial{max-width:1400px;margin:0 auto;display:grid;grid-template-columns:1.5fr .9fr 1.2fr 1.1fr;gap:60px;align-items:start}
 .footer-logo-lockup-premium{display:flex;align-items:center;gap:12px}
@@ -172,8 +176,6 @@ body.pill-visible .investment-pill-premium{opacity:1;transform:translateX(0);poi
 .f-btn-premium:hover{background:var(--dorado);color:var(--navy);letter-spacing:2px}
 .f-bottom-editorial{max-width:1400px;margin:60px auto 0;padding:28px 0;border-top:1px solid rgba(255,255,255,0.06);display:flex;justify-content:space-between;font-size:9px;letter-spacing:1.5px;color:#4e5463;text-transform:uppercase}
 .f-legal-small-editorial{opacity:.6}
-
-/* MOBILE */
 .mobile-overlay{position:fixed;top:0;right:-100%;width:88%;max-width:380px;height:100vh;background:var(--navy);z-index:10000;display:block;overflow-y:auto;transition:right .5s var(--ease);border-left:1px solid rgba(200,176,144,.15)}
 .mobile-overlay.open{right:0}
 .mobile-head{display:flex;justify-content:space-between;align-items:center;padding:28px 32px;border-bottom:1px solid rgba(200,176,144,.15)}
@@ -190,7 +192,6 @@ body.pill-visible .investment-pill-premium{opacity:1;transform:translateX(0);poi
 .acc-panel.open{max-height:600px;padding-bottom:16px}
 .acc-panel a{font-size:12px;padding:12px 0;color:rgba(255,255,255,.55)}
 .mobile-cta .btn-action-premium{background:transparent;border:1px solid var(--dorado);color:var(--dorado);text-align:center;margin-top:24px;padding:14px 0;font-size:11px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;display:block;text-decoration:none}
-
 @media(max-width:1100px){
   .btn-burger{display:flex}.nav-desktop{display:none}
   header.sticky-header-premium{padding:0 24px}
@@ -203,4 +204,5 @@ body.pill-visible .investment-pill-premium{opacity:1;transform:translateX(0);poi
   .f-bottom-editorial{flex-direction:column;gap:8px;text-align:center}
   .fila-doble-premium{grid-template-columns:1fr}
   .barra-flotante-contacto{display:none}
+  .hero-principal::after{height:100px}.hero-principal::before{bottom:98px}
 }
