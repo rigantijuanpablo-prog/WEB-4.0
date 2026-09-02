@@ -22,10 +22,11 @@ body{font-family:'Inter',sans-serif;background:var(--paper);color:#111;-webkit-f
 .lang-switch button.active{background:var(--gold);color:var(--navy);border-color:var(--gold)}
 .top-link{color:#fff;text-decoration:none;font-weight:500}
 
-/* HERO FINAL - DIAGONAL FINA COMO WEB PRINCIPAL */
+/* HERO FINAL CORREGIDO - DIAGONAL A 0 EN IZQUIERDA */
 .hero{position:relative;height:84vh;min-height:680px;background:var(--navy);overflow:hidden;isolation:isolate}
-.hero::before{content:"";position:absolute;left:-5%;right:-5%;bottom:92px;height:1px;background:var(--gold);transform:rotate(-2.8deg);transform-origin:center;z-index:7;pointer-events:none}
-.hero::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:72px;background:var(--paper);clip-path:polygon(0 38%, 100% 100%, 100% 100%, 0 100%);z-index:6;pointer-events:none}
+.hero::before{content:"";position:absolute;left:-5%;right:-5%;bottom:68px;height:1px;background:var(--gold);transform:rotate(2.6deg);transform-origin:center;z-index:7;pointer-events:none}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:68px;background:var(--paper);clip-path:polygon(0 100%, 100% 32%, 100% 100%, 0 100%);z-index:6;pointer-events:none}
+
 .slide{position:absolute;inset:0;display:flex;opacity:0;visibility:hidden;transition:opacity .9s;pointer-events:none}
 .slide.active{opacity:1;visibility:visible;pointer-events:auto;z-index:2}
 .s-left{width:42%;display:flex;flex-direction:column;justify-content:center;padding:110px 5% 110px 6%;background:var(--navy);position:relative;z-index:10}
@@ -125,7 +126,7 @@ body{font-family:'Inter',sans-serif;background:var(--paper);color:#111;-webkit-f
 .footer-inner span{font-size:9px;letter-spacing:2px;color:var(--gold);text-transform:uppercase;display:block;margin-bottom:14px;font-weight:700}
 .footer-inner p{font-size:12px;line-height:1.7;color:rgba(255,255,255,.55)}
 .footer-bottom{text-align:center;padding:20px;font-size:9px;letter-spacing:2px;color:rgba(255,255,255,.3);text-transform:uppercase}
-@media(max-width:1024px){.s-left{width:100%;padding:60px 24px 0}.s-right{display:none}.a-slide{grid-template-columns:1fr;padding:48px 24px;gap:32px}.menu{display:none}.top-bar{padding:12px 16px;flex-wrap:wrap;gap:10px}.contact-inner,.footer-inner{grid-template-columns:1fr}.nav-hero{bottom:40px}}
+@media(max-width:1024px){.s-left{width:100%;padding:60px 24px 0}.s-right{display:none}.a-slide{grid-template-columns:1fr;padding:48px 24px;gap:32px}.menu{display:none}.top-bar{padding:12px 16px;flex-wrap:wrap;gap:10px}.contact-inner,.footer-inner{grid-template-columns:1fr}}
 </style>
 
 <section id="filosofia" class="philosophy"><div class="gold-line"></div><p class="quote">"A good tailor keeps his client for life because, knowing his development, he knows how to better adapt his garments."</p><span class="quote-sub">RGMA Philosophy — Since 1948</span></section>
