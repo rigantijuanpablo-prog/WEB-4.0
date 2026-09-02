@@ -154,55 +154,354 @@ body.pill-visible .investment-pill-premium{opacity:1;transform:translateX(0);poi
 .fila-accion-premium{margin-top:12px}
 .btn-enviar-premium{background:var(--navy);color:#fff;border:1px solid var(--navy);padding:16px 36px;font-size:11px;letter-spacing:2.5px;font-weight:700;cursor:pointer;transition:all .4s var(--ease)}
 .btn-enviar-premium:hover{background:transparent;color:var(--navy);letter-spacing:2.8px}
-.footer-rgm-premium{background:#070b14;padding:80px 48px 0;border-top:1px solid rgba(200,176,144,0.15)}
-.footer-inner-editorial{max-width:1400px;margin:0 auto;display:grid;grid-template-columns:1.5fr .9fr 1.2fr 1.1fr;gap:60px;align-items:start}
-.footer-logo-lockup-premium{display:flex;align-items:center;gap:12px}
-.footer-logo-text-premium{font-family:'Playfair Display',serif;font-size:22px;letter-spacing:5px;font-weight:600;color:#fff}
-.ma-gold{color:var(--dorado)}
-.footer-isologo-premium{width:44px;height:auto;filter:brightness(0) invert(1);opacity:.9}
-.f-claim-editorial{font-family:'Lora',serif;font-style:italic;font-size:14px;color:#9aa8c0;line-height:1.4;margin-top:22px}
-.f-line-premium{width:28px;height:1px;background:var(--dorado);margin:22px 0}
-.f-copy-brand-editorial{font-size:10px;letter-spacing:2.8px;color:#8a92a6;line-height:1.9;text-transform:uppercase}
-.f-italic-editorial{font-family:'Lora',serif;font-style:italic;text-transform:none;letter-spacing:0}
-.f-title-editorial{display:block;font-size:9px;letter-spacing:3px;color:var(--dorado);margin-bottom:24px;font-weight:700;text-transform:uppercase}
-.f-link-editorial{display:block;color:#a8aebb;text-decoration:none;font-size:13px;margin-bottom:12px;transition:all .35s var(--ease)}
-.f-link-editorial:hover{color:var(--dorado-light);padding-left:4px}
-.f-address-protagonist{font-size:15px;line-height:1.7;color:#fff;font-weight:400;margin-bottom:16px}
-.f-phone-premium{font-size:13px;color:#8a90a0}
-.f-email-protagonist{font-size:14px;color:var(--dorado-light);font-weight:500;text-decoration:none}
-.f-confidential-badge{font-size:11px;color:var(--dorado);font-style:italic;margin-top:4px;display:block}
-.f-consulta-txt-editorial{font-size:13px;line-height:1.7;color:#8a90a0;margin-bottom:12px}
-.f-btn-premium{border:1px solid var(--dorado);padding:14px 24px;display:inline-block;font-size:10px;letter-spacing:1.8px;color:var(--dorado-light);text-decoration:none;text-transform:uppercase;transition:all .4s var(--ease)}
-.f-btn-premium:hover{background:var(--dorado);color:var(--navy);letter-spacing:2px}
-.f-bottom-editorial{max-width:1400px;margin:60px auto 0;padding:28px 0;border-top:1px solid rgba(255,255,255,0.06);display:flex;justify-content:space-between;font-size:9px;letter-spacing:1.5px;color:#4e5463;text-transform:uppercase}
-.f-legal-small-editorial{opacity:.6}
-.mobile-overlay{position:fixed;top:0;right:-100%;width:88%;max-width:380px;height:100vh;background:var(--navy);z-index:10000;display:block;overflow-y:auto;transition:right .5s var(--ease);border-left:1px solid rgba(200,176,144,.15)}
-.mobile-overlay.open{right:0}
-.mobile-head{display:flex;justify-content:space-between;align-items:center;padding:28px 32px;border-bottom:1px solid rgba(200,176,144,.15)}
-.mobile-brand-editorial{font-family:'Playfair Display',serif;letter-spacing:4px;color:#fff;font-size:14px}
-.mobile-head button{background:none;border:1px solid rgba(200,176,144,.3);color:var(--dorado);width:36px;height:36px;display:flex;align-items:center;justify-content:center;cursor:pointer}
-.mobile-links{list-style:none;padding:20px 32px}
-.mobile-links li{border-bottom:1px solid rgba(255,255,255,.06)}
-.mobile-links a{color:rgba(255,255,255,.75);display:block;padding:18px 0;font-size:13px;text-decoration:none;transition:.3s}
-.mobile-links a:hover{color:var(--dorado);padding-left:6px}
-.acc-btn-editorial{width:100%;background:none;border:0;color:rgba(255,255,255,.75);display:flex;justify-content:space-between;align-items:center;padding:18px 0;font-size:13px;cursor:pointer}
-.acc-btn-editorial::after{content:'';width:6px;height:6px;border-right:1px solid var(--dorado);border-bottom:1px solid var(--dorado);transform:rotate(45deg);transition:transform .4s ease}
-.acc-btn-editorial.active-premium::after{transform:rotate(-135deg)}
-.acc-panel{max-height:0;overflow:hidden;transition:max-height .4s ease;padding-left:12px}
-.acc-panel.open{max-height:600px;padding-bottom:16px}
-.acc-panel a{font-size:12px;padding:12px 0;color:rgba(255,255,255,.55)}
-.mobile-cta .btn-action-premium{background:transparent;border:1px solid var(--dorado);color:var(--dorado);text-align:center;margin-top:24px;padding:14px 0;font-size:11px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;display:block;text-decoration:none}
-@media(max-width:1100px){
-  .btn-burger{display:flex}.nav-desktop{display:none}
-  header.sticky-header-premium{padding:0 24px}
-  .hero-principal{padding:0 24px}.hero-contenedor-texto{width:100%;margin-left:0}
-  .hero-contenedor-texto .hero-title-editorial{font-size:38px}
-  .estudio-grid,.contenedor-grilla,.footer-inner-editorial{grid-template-columns:1fr;gap:40px}
-  .section-estudio,.seccion-contacto{padding:90px 24px}
-  .mega-grid-simple{grid-template-columns:1fr;padding:20px}
-  .investment-seal-link{bottom:22%;right:24px;transform:scale(.8)}
-  .f-bottom-editorial{flex-direction:column;gap:8px;text-align:center}
-  .fila-doble-premium{grid-template-columns:1fr}
-  .barra-flotante-contacto{display:none}
-  .hero-principal::after{height:100px}.hero-principal::before{bottom:98px}
+/* ==========================================================================
+   FOOTER PREMIUM - RGMA (MODIFICADO PARA CONTRASTE Y REFINAMIENTO)
+   ========================================================================== */
+
+.footer-rgm-premium {
+  background: #070b14; /* Tu color original (azul-negro institucional) */
+  padding: 80px 48px 40px; /* Se añadió un padding-bottom de 40px para que respire al final */
+  border-top: 1px solid rgba(200, 176, 144, 0.15);
+}
+
+.footer-inner-editorial {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.5fr .9fr 1.2fr 1.1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.footer-logo-lockup-premium {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-logo-text-premium {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  letter-spacing: 5px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.ma-gold {
+  color: var(--dorado);
+}
+
+.footer-isologo-premium {
+  width: 44px;
+  height: auto;
+  filter: brightness(0) invert(1);
+  opacity: .9;
+}
+
+/* Se subió el tono a #a4b3cd para que el claim editorial sea perfectamente legible */
+.f-claim-editorial {
+  font-family: 'Lora', serif;
+  font-style: italic;
+  font-size: 14px;
+  color: #a4b3cd; 
+  line-height: 1.4;
+  margin-top: 22px;
+}
+
+.f-line-premium {
+  width: 28px;
+  height: 1px;
+  background: var(--dorado);
+  margin: 22px 0;
+}
+
+/* Ajustado a #9ca4b6 para evitar el efecto "borroso" del gris apagado */
+.f-copy-brand-editorial {
+  font-size: 10px;
+  letter-spacing: 2.8px;
+  color: #9ca4b6; 
+  line-height: 1.9;
+  text-transform: uppercase;
+}
+
+.f-italic-editorial {
+  font-family: 'Lora', serif;
+  font-style: italic;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.f-title-editorial {
+  display: block;
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: var(--dorado);
+  margin-bottom: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* Enlaces limpios con un tono base levemente más claro para UI */
+.f-link-editorial {
+  display: block;
+  color: #b2b8c6; 
+  text-decoration: none;
+  font-size: 13px;
+  margin-bottom: 12px;
+  transition: all .35s var(--ease);
+}
+
+.f-link-editorial:hover {
+  color: var(--dorado-light);
+  padding-left: 6px; /* Un poco más de desplazamiento interactivo */
+}
+
+.f-address-protagonist {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #fff;
+  font-weight: 400;
+  margin-bottom: 16px;
+}
+
+/* Datos de contacto clave optimizados para lectura rápida */
+.f-phone-premium {
+  font-size: 13px;
+  color: #a4abbd; 
+}
+
+.f-email-protagonist {
+  font-size: 14px;
+  color: var(--dorado-light);
+  font-weight: 500;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color .3s ease;
+}
+
+.f-email-protagonist:hover {
+  border-bottom-color: var(--dorado-light); /* Efecto refinado bajo el email */
+}
+
+.f-confidential-badge {
+  font-size: 11px;
+  color: var(--dorado);
+  font-style: italic;
+  margin-top: 6px;
+  display: block;
+}
+
+/* Subido el contraste del texto descriptivo de la consulta */
+.f-consulta-txt-editorial {
+  font-size: 13px;
+  line-height: 1.7;
+  color: #a4abbd; 
+  margin-bottom: 16px;
+}
+
+/* Botón pulido para que se sienta integrado pero con autoridad */
+.f-btn-premium {
+  border: 1px solid var(--dorado);
+  padding: 14px 24px;
+  display: inline-block;
+  font-size: 10px;
+  letter-spacing: 1.8px;
+  color: var(--dorado-light);
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all .4s var(--ease);
+}
+
+.f-btn-premium:hover {
+  background: var(--dorado);
+  color: #070b14; /* Cambiado a tu fondo oscuro exacto para legibilidad del texto */
+  letter-spacing: 2px;
+  box-shadow: 0 4px 20px rgba(200, 176, 144, 0.12);
+}
+
+/* Ajuste crítico: El copyright anterior (#4e5463) era casi invisible. Ahora es legible y sutil. */
+.f-bottom-editorial {
+  max-width: 1400px;
+  margin: 60px auto 0;
+  padding: 28px 0 0; /* Removido padding inferior porque ya lo maneja el contenedor padre */
+  border-top: 1px solid rgba(255,255,255,0.06);
+  display: flex;
+  justify-content: space-between;
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  color: #71788a; 
+  text-transform: uppercase;
+}
+
+.f-legal-small-editorial {
+  opacity: .75;
+}
+
+/* ==========================================================================
+   ELEMENTOS MÓVILES Y NAVEGACIÓN COMPLEMENTARIA
+   ========================================================================== */
+
+.mobile-overlay {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 88%;
+  max-width: 380px;
+  height: 100vh;
+  background: var(--navy);
+  z-index: 10000;
+  display: block;
+  overflow-y: auto;
+  transition: right .5s var(--ease);
+  border-left: 1px solid rgba(200,176,144,.15);
+}
+
+.mobile-overlay.open {
+  right: 0;
+}
+
+.mobile-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 28px 32px;
+  border-bottom: 1px solid rgba(200,176,144,.15);
+}
+
+.mobile-brand-editorial {
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 4px;
+  color: #fff;
+  font-size: 14px;
+}
+
+.mobile-head button {
+  background: none;
+  border: 1px solid rgba(200,176,144,.3);
+  color: var(--dorado);
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.mobile-links {
+  list-style: none;
+  padding: 20px 32px;
+}
+
+.mobile-links li {
+  border-bottom: 1px solid rgba(255,255,255,.06);
+}
+
+.mobile-links a {
+  color: rgba(255,255,255,.75);
+  display: block;
+  padding: 18px 0;
+  font-size: 13px;
+  text-decoration: none;
+  transition: .3s;
+}
+
+.mobile-links a:hover {
+  color: var(--dorado);
+  padding-left: 6px;
+}
+
+.acc-btn-editorial {
+  width: 100%;
+  background: none;
+  border: 0;
+  color: rgba(255,255,255,.75);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 0;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.acc-btn-editorial::after {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-right: 1px solid var(--dorado);
+  border-bottom: 1px solid var(--dorado);
+  transform: rotate(45deg);
+  transition: transform .4s ease;
+}
+
+.acc-btn-editorial.active-premium::after {
+  transform: rotate(-135deg);
+}
+
+.acc-panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .4s ease;
+  padding-left: 12px;
+}
+
+.acc-panel.open {
+  max-height: 600px;
+  padding-bottom: 16px;
+}
+
+.acc-panel a {
+  font-size: 12px;
+  padding: 12px 0;
+  color: rgba(255,255,255,.55);
+}
+
+.mobile-cta .btn-action-premium {
+  background: transparent;
+  border: 1px solid var(--dorado);
+  color: var(--dorado);
+  text-align: center;
+  margin-top: 24px;
+  padding: 14px 0;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  display: block;
+  text-decoration: none;
+}
+
+/* Media Query Adaptativo */
+@media(max-width:1100px) {
+  .btn-burger { display: flex; }
+  .nav-desktop { display: none; }
+  header.sticky-header-premium { padding: 0 24px; }
+  .hero-principal { padding: 0 24px; }
+  .hero-contenedor-texto { width: 100%; margin-left: 0; }
+  .hero-contenedor-texto .hero-title-editorial { font-size: 38px; }
+  
+  /* Ajuste para que la grilla del footer rompa elegantemente a una sola columna */
+  .estudio-grid, .contenedor-grilla, .footer-inner-editorial { 
+    grid-template-columns: 1fr; 
+    gap: 40px; 
+  }
+  
+  .footer-rgm-premium {
+    padding: 60px 24px 30px; /* Reducción de márgenes laterales en pantallas chicas */
+  }
+  
+  .section-estudio, .seccion-contacto { padding: 90px 24px; }
+  .mega-grid-simple { grid-template-columns: 1fr; padding: 20px; }
+  .investment-seal-link { bottom: 22%; right: 24px; transform: scale(.8); }
+  
+  .f-bottom-editorial { 
+    flex-direction: column; 
+    gap: 12px; 
+    text-align: center; 
+    padding-top: 20px;
+  }
+  
+  .fila-doble-premium { grid-template-columns: 1fr; }
+  .barra-flotante-contacto { display: none; }
+  .hero-principal::after { height: 100px; }
+  .hero-principal::before { bottom: 98px; }
 }
